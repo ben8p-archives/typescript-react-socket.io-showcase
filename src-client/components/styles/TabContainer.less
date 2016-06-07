@@ -1,0 +1,43 @@
+@barHeight: 3em;
+.tabContainer {
+    width: 100%;
+    height: 100%;
+
+    .tabs {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: @barHeight;
+        background-color: #0097A7;
+
+        li {
+            float: left;
+            padding: 0.5em 1em;
+            text-align: center;
+            height: 2em;
+            background-color: #B2EBF2;
+            line-height: 2em;
+            margin: 0 0.2em;
+            cursor: pointer;
+        }
+    }
+    &[data-selected-tab=settings] [data-tab-ref=settings],
+    &[data-selected-tab=photo] [data-tab-ref=photo],
+    &[data-selected-tab=chat] [data-tab-ref=chat] {
+        background-color: #80DEEA;
+    }
+
+    .tabContent {
+        display: none;
+        width: 100%;
+        height: 100%;
+        border-bottom: @barHeight solid transparent;
+        box-sizing: border-box;
+    }
+    &[data-selected-tab=settings] .tabContent.settingsContent,
+    &[data-selected-tab=photo] .tabContent.photoContent,
+    &[data-selected-tab=chat] .tabContent.chatContent {
+        display: block;
+    }
+}

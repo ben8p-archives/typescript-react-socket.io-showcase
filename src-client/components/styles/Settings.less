@@ -1,0 +1,36 @@
+.settings {
+    .title {
+        cursor: pointer;
+        background-color: #0097A7;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+    }
+    .content {
+        transition: opacity 0.5s linear;
+        -webkit-transition: opacity 0.5s linear;
+         margin: 0.5em 0 1em 0;
+    }
+    .collapsed {
+        .content {
+            height: 0;
+            overflow: hidden;
+            opacity: 0;
+        }
+        .title:before {
+            content: '\25BA'
+        }
+    }
+    .expanded {
+        .content {
+            height: auto;
+            opacity: 1;
+        }
+        .title:before {
+            content: '\25BC'
+        }
+    }
+    input {
+        width: 100%;
+    }
+}

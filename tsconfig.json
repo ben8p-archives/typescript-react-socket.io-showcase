@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "module": "commonjs",
+        "target": "es5",
+        "jsx": "react"
+    },
+    "filesGlob": [
+        "./src-client/**/*.tsx",
+        "./src-client/**/*.ts",
+        "./src-server/**/*.tsx",
+        "./src-server/**/*.ts",
+        "./typings/index.d.ts"
+    ],
+    "files": [
+        "./src-client/components/Chat.tsx",
+        "./src-client/components/Photo.tsx",
+        "./src-client/components/Settings.tsx",
+        "./src-client/components/TabContainer.tsx",
+        "./src-client/index.tsx",
+        "./src-client/core/on.ts",
+        "./src-client/core/SettingsStore.ts",
+        "./src-server/server.ts",
+        "./typings/index.d.ts"
+    ],
+    "atom": {
+        "rewriteTsconfig": true
+    }
+}
